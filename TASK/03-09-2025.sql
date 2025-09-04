@@ -1,0 +1,32 @@
+<<<<<<< HEAD
+=======
+select count(*) from employees;
+
+select avg(salary) from employees;
+
+
+>>>>>>> 39ed9a95837c320910ec8faf632a7191fd780b67
+-- Scenario 3:
+-- Question: List all employees ordered by salary (highest first).
+SELECT * FROM EMPLOYEES ORDER BY SALARY DESC;
+
+-- Scenario 4:
+-- Question: Show employees ordered by department (A–Z), then salary (low–high).
+SELECT * FROM EMPLOYEES ORDER BY DEPARTMENT,SALARY ASC;
+
+
+-- DISCOUNT FUNCTION
+DELIMITER $$
+CREATE FUNCTION DISCOUNT(AMOUNT DECIMAL(10,2),DISCOUNT_PERCENTAGE DECIMAL(10,2))
+RETURNS DECIMAL(10,2)
+deterministic
+BEGIN
+	DECLARE DISCOUNT_AMOUNT DECIMAL(10,2);
+    DECLARE FINAL_AMOUNT DECIMAL(10,2);
+    SET DISCOUNT_AMOUNT = (AMOUNT * DISCOUNT_PERCENTAGE)/100;
+    SET FINAL_AMOUNT = AMOUNT-DISCOUNT_AMOUNT;
+    RETURN FINAL_AMOUNT;
+END
+$$ DELIMITER ;
+
+SELECT DISCOUNT(1000,10) FROM DUAL;
