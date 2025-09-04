@@ -1,11 +1,9 @@
-<<<<<<< HEAD
-=======
+
 select count(*) from employees;
 
 select avg(salary) from employees;
 
 
->>>>>>> 39ed9a95837c320910ec8faf632a7191fd780b67
 -- Scenario 3:
 -- Question: List all employees ordered by salary (highest first).
 SELECT * FROM EMPLOYEES ORDER BY SALARY DESC;
@@ -30,3 +28,5 @@ END
 $$ DELIMITER ;
 
 SELECT DISCOUNT(1000,10) FROM DUAL;
+
+
