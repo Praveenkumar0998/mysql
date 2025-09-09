@@ -36,7 +36,6 @@ any(select salary from employees where department_id = 10) ;
 select * from employees e1 where salary>
 (select avg(salary) from employees e2 where e1.department_id = e2.department_id);
 
-
 -- 9. Find employees who do not have any department assigned. (Use NOT EXISTS)
 select * from employees e where 
 not exists
