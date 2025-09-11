@@ -22,3 +22,25 @@ DELIMITER ;
 SET @MSG  = '';
 CALL UPDATEDEPARTMENT(101,'HR',@MSG);
 SELECT @MSG;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
