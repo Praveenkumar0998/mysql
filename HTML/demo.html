@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#" class="nav">Home</a>
+            <a href="/movie.html" class="nav">Movie</a>
+            <a href="#" class="nav">Contact</a>
+            <a href ="#" class="nav"><button style="background: transparent; border:none; color:black;cursor:pointer;font-size: 20px;">Hire Me</button></a>
+        </nav>
+    </header>
+    
+    <div id="profile-card">
+        <h1><center>Welcome</center></h1>
+        <center>
+        <table style="border: 2px solid; border-radius: 10px;height: 270px;width: 550px; font-size: 20px;"class="font-style">
+                   <tr><td class="head">Name</td><td>Praveen Kumar S</td></tr>
+                    <tr><td class="head">Email</td><td>rampradheep14@gmail.com</td></tr>
+                    <tr><td class="head">Contact</td><td>+91 7806980542</td></tr>
+                    <tr style="text-align: center;">
+                        <td><button class="button" id="education">Education</button></td>
+                        <td><button class="button" id="skills">Skills</button></td>
+                        <td><button class="button" id="projects">Projects</button></td>
+                    </tr>
+        </table>
+        </center>
+    </div><br><br>
+
+    <div id="Educations" style="display: none; box-shadow: 5px,5px,10px,black;"><center>
+        <table border="2px" style="height:300px;width: 800px; border-collapse: collapse;">
+            <thead class="head">
+                <tr><td>School/Collage</td><td>Course</td><td>Percentage</td><td>Passed Out</td></tr>
+            </thead>
+            <tbody class="head">
+                <tr>
+                    <td>Sathyabama Institute of Science and Technology</td>
+                    <td>BE CSE</td>
+                    <td>83</td>
+                    <td>2025</td>
+                </tr>
+                <tr>
+                    <td>SRV Matriculation Hr Sec School</td>
+                    <td>StateBoard</td>
+                    <td>83</td>
+                    <td>2021</td>
+                </tr>
+                <tr>
+                    <td>Holy Cross Matriculation Hr Sec School</td>
+                    <td>SSLC</td>
+                    <td>79</td>
+                    <td>2019</td>
+                </tr>
+            </tbody>
+        </table></center>
+    </div>
+    
+    <div style="display: none;" id="skill"><center>
+        <table height="100px">
+            <tr>
+                <td><button class="button">Java</button></td>
+                <td><button class="button">Python</button></td>
+                <td><button class="button">PL\SQL</button></td>
+            </tr>
+            <tr>
+                <td><button class="button">SQL</button></td>
+                <td><button class="button">Html</button></td>
+            </tr>
+        </table></center>
+    </div>
+
+    <div style="display: none;" id="project"><center>
+        <table border="2px" style="border-collapse: collapse; height:300px;width: 800px; text-align: center;" class="head">
+            <tr>
+                <td class="head">Project Name</td>
+                <td class="head">Tech Stack</td>
+                <td class="head">GitHub</td>
+            </tr>
+            <tr>
+                <td>Bank Management System</td>
+                <td>SQL,PLSQL</td>
+                <td><a href="https://github.com/Praveenkumar0998/Bank-Management-System"><button class="project-button">Click Here</button></a></td>
+            </tr>
+            <tr>
+                <td>E-commerse Backend System</td>
+                <td>Java,SQL</td>
+                <td><a href="#"><button class="project-button">Click Here</button></a></td>
+            </tr>
+        </table></center>
+    </div>
+
+    <div style="margin-bottom: 30px;">
+    <footer>
+        <ul type="none">
+            <li><a href="/form Task.html" class="nav">Feedback</a></li>
+            <li ><a href="https://www.linkedin.com/in/praveen-kumar-s2004/" class="nav">Linked in</a></li>
+            <li ><a href="#" class="nav">Education</a></li>
+            <li ><a href="https://github.com/Praveenkumar0998" class="nav">Git hub</a></li>
+            <li><a href="#" class="nav">Projects</a></li>
+        </ul>
+    </footer>
+    </div>
+
+    <style>
+    .nav{
+        text-decoration: none;
+    }
+    .head{
+        text-align: center;
+        font-size: 20px;
+    }
+    .button{
+        border-radius: 20px;
+        width:200px;
+        border:none;
+        cursor:pointer;
+        font-size: 20px;
+        font-family:"Roboto Mono", monospace;
+        
+    }
+    body{     
+        font-family: "Roboto Mono", monospace;
+        line-height: 1.6;
+        padding: 2rem;
+        /* color:#04d9ff; */
+    }
+    .project-button{
+        border: none; 
+        background: transparent;
+        cursor: pointer;
+        /* color:#04d9ff; */
+    }
+   </style>
+
+   <script>
+        let educationButton = document.getElementById("education");
+         let educationfield = document.getElementById("Educations");
+         let skillsButton = document.getElementById("skills");
+         let skillfield = document.getElementById("skill");
+        let projectfield = document.getElementById("project");
+         let projectsbutton = document.getElementById("projects");
+         projectsbutton.addEventListener("click",()=>{
+            projectfield.style.display="";
+            educationfield.style.display="none";
+            skillfield.style.display="none";
+         })
+        educationButton.addEventListener("click",()=>{
+            educationfield.style.display="";
+            skillfield.style.display="none";
+            projectfield.style.display="none";
+        })
+        
+        skillsButton.addEventListener("click",()=>{
+            educationfield.style.display="none";
+            skillfield.style.display="";
+            projectfield.style.display="none";
+        })
+
+
+   </script>
+</body>
+</html>
